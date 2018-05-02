@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StackNavigator } from 'react-navigation';
+import DeckAdd from './components/DeckAdd';
 import DeckListView from './components/DeckListView';
 import DeckView from './components/DeckView';
 import { YellowBox, TouchableOpacity } from 'react-native';
@@ -25,22 +26,36 @@ const Header = styled.Text`
   font-size: 22;
 `;
 
+const Plus = styled.Text`
+  color: gray;
+  margin-right: 5;
+  font-size: 36;
+`;
+
 const MainNavigator = StackNavigator({
   Home: {
-    screen: DeckListView,
-    navigationOptions: {
-      title: 'Decks',
-      headerRight: (
-        <TouchableOpacity onPress={() => alert('This is a button!')}>
-          <FontAwesome name="plus" size={30} color={'#888'} />
-        </TouchableOpacity>
-      )
-    }
+    screen: DeckListView
   },
   Deck: {
     screen: DeckView
   },
+  AddDeck: {
+    screen: DeckAdd
+  },
   initialRouteName: 'Home'
+});
+
+DeckListView.navigationOptions = ({ navigation }) => ({
+  title: 'Decks',
+  headerRight: (
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate('AddDeck');
+      }}
+    >
+      <Plus>+</Plus>
+    </TouchableOpacity>
+  )
 });
 
 export default class App extends React.Component {
