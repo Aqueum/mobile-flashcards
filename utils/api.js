@@ -19,7 +19,7 @@ export function saveDeckTitle(title) {
   return AsyncStorage.mergeItem(
     DECKS,
     JSON.stringify({
-      [title]: title
+      [title]: 'test'
     })
   );
 }
