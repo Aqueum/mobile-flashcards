@@ -32,13 +32,7 @@ const MainNavigator = StackNavigator({
       title: 'Decks',
       headerRight: (
         <TouchableOpacity onPress={() => alert('This is a button!')}>
-          <FontAwesome
-            name="plus"
-            size={30}
-            color={'#888'}
-            padding-right={10}
-            px
-          />
+          <FontAwesome name="plus" size={30} color={'#888'} />
         </TouchableOpacity>
       )
     }
