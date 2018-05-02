@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StackNavigator } from 'react-navigation';
-import DeckList from './containers/DeckList';
-import Deck from './containers/Deck';
+import DeckListView from './components/DeckListView';
+import DeckView from './components/DeckView';
 import { YellowBox } from 'react-native';
 
 //https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-380648083
@@ -26,13 +26,13 @@ const Header = styled.Text`
 
 const MainNavigator = StackNavigator({
   Home: {
-    screen: DeckList,
-    navigationOptions: { header: null }
+    screen: DeckListView,
+    navigationOptions: { title: 'Decks' }
   },
   Deck: {
-    screen: Deck,
-    navigationOptions: { header: null }
-  }
+    screen: DeckView
+  },
+  initialRouteName: 'Home'
 });
 
 export default class App extends React.Component {
