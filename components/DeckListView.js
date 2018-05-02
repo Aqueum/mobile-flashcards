@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
 
 const Page = styled.View`
@@ -35,10 +35,12 @@ export default class DeckListView extends React.Component {
         <FlatList
           data={this.props.decks}
           renderItem={({ item }) => (
-            <Deck>
-              <Title>{item.key}</Title>
-              <Enumeration>{item.count} cards</Enumeration>
-            </Deck>
+            <TouchableOpacity>
+              <Deck>
+                <Title>{item.key}</Title>
+                <Enumeration>{item.count} cards</Enumeration>
+              </Deck>
+            </TouchableOpacity>
           )}
         />
       </Page>
