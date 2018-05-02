@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { StackNavigator } from 'react-navigation';
 import DeckListView from './components/DeckListView';
 import DeckView from './components/DeckView';
-import { YellowBox } from 'react-native';
+import { YellowBox, TouchableOpacity } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 
 //https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-380648083
 YellowBox.ignoreWarnings([
@@ -27,7 +28,20 @@ const Header = styled.Text`
 const MainNavigator = StackNavigator({
   Home: {
     screen: DeckListView,
-    navigationOptions: { title: 'Decks' }
+    navigationOptions: {
+      title: 'Decks',
+      headerRight: (
+        <TouchableOpacity onPress={() => alert('This is a button!')}>
+          <FontAwesome
+            name="plus"
+            size={30}
+            color={'#888'}
+            padding-right={10}
+            px
+          />
+        </TouchableOpacity>
+      )
+    }
   },
   Deck: {
     screen: DeckView
