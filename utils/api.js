@@ -1,4 +1,5 @@
 import { AsyncStorage } from 'react-native';
+import { DECKS } from './data';
 
 // getDecks: return all of the decks
 // along with their titles, questions, and answers.
