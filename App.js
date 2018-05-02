@@ -1,5 +1,5 @@
 import React from 'react';
-import DeckListView from './components/DeckListView';
+import DeckList from './containers/DeckList';
 import styled from 'styled-components';
 
 const Page = styled.View`
@@ -20,7 +20,7 @@ export default class App extends React.Component {
     return (
       <Page>
         <Header>Mobile Flashcards</Header>
-        <DeckListView />
+        <DeckList />
       </Page>
     );
   }
