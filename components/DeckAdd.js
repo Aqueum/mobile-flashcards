@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { TouchableOpacity, TextInput } from 'react-native';
 import styled from 'styled-components';
-import { saveDeckTitle, getDecks } from '../utils/api';
+import { saveDeckTitle } from '../utils/api';
 
 const Page = styled.View`
   flex: 1;
