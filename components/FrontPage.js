@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { StackNavigator } from 'react-navigation';
 import { YellowBox, TouchableOpacity } from 'react-native';
@@ -59,7 +60,7 @@ DeckListView.navigationOptions = ({ navigation }) => ({
   )
 });
 
-export default class FrontPage extends React.Component {
+class FrontPage extends React.Component {
   render() {
     return (
       <Page>
@@ -68,3 +69,6 @@ export default class FrontPage extends React.Component {
     );
   }
 }
+
+//export default FrontPage;
+export default connect()(FrontPage);
