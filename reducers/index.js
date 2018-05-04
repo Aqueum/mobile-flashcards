@@ -7,7 +7,7 @@ import {
   RECEIVE_NEW_DECK
 } from '../actions';
 
-export default function rootReducer(
+export default function Reducers(
   state = {
     isFetching: false,
     decks: [],
