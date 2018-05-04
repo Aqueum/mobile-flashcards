@@ -53,23 +53,6 @@ class DeckListView extends Component {
   render() {
     return (
       <Page>
-        <Title>test</Title>
-      </Page>
-    );
-  }
-}
-
-/*
-const mapStateToProps = state => ({
-  decks: state.decks || []
-});
-*/
-
-export default connect()(DeckListView);
-
-/*
-
-     <Page>
         <FlatList
           data={decks}
           renderItem={({ item }) => (
@@ -88,5 +71,18 @@ export default connect()(DeckListView);
           )}
         />
       </Page>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  decks: state.decks || []
+});
+
+export default connect(mapStateToProps)(DeckListView);
+
+/*
+
+
 
 */
