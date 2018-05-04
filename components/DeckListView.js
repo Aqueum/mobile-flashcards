@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { FlatList, TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
+import { getDecks } from '../actions';
 
 const Page = styled.View`
   flex: 1;
@@ -28,6 +30,7 @@ const Enumeration = styled.Text`
   text-align: center;
 `;
 
+/*
 const decks = [
   { key: 'old deck', count: 3 },
   { key: 'new deck', count: 2 },
@@ -40,11 +43,33 @@ const decks = [
   { key: 'next deck', count: 2 },
   { key: 'other deck', count: 2 }
 ];
+*/
 
 class DeckListView extends Component {
+  componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(getDecks());
+  }
   render() {
     return (
       <Page>
+        <Title>test</Title>
+      </Page>
+    );
+  }
+}
+
+/*
+const mapStateToProps = state => ({
+  decks: state.decks || []
+});
+*/
+
+export default connect()(DeckListView);
+
+/*
+
+     <Page>
         <FlatList
           data={decks}
           renderItem={({ item }) => (
@@ -63,8 +88,5 @@ class DeckListView extends Component {
           )}
         />
       </Page>
-    );
-  }
-}
 
-export default DeckListView;
+*/
