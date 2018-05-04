@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StackNavigator } from 'react-navigation';
-import DeckAdd from './components/DeckAdd';
-import DeckListView from './components/DeckListView';
-import DeckView from './components/DeckView';
 import { YellowBox, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { createStore } from 'redux';
+import DeckAdd from './DeckAdd';
+import DeckListView from './DeckListView';
+import DeckView from './DeckView';
 
 //https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-380648083
 YellowBox.ignoreWarnings([
