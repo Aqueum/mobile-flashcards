@@ -1,5 +1,5 @@
 import { AsyncStorage } from 'react-native';
-import { DECKS } from '../utils/data';
+import { DECKS, initialiseData } from '../utils/data';
 
 // getDecks: return all of the decks
 // along with their titles, questions, and answers.
@@ -24,6 +24,7 @@ export function getDecks() {
   return function(dispatch) {
     dispatch(requestDecks());
     return AsyncStorage.getItem(DECKS)
+      .then(initialiseData)
       .then(
         response => response.json(),
         error => console.log('An error occurred.', error)
