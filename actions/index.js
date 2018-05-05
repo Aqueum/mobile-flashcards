@@ -4,7 +4,7 @@ import { DECKS } from '../utils/data';
 // getDecks: return all of the decks
 // along with their titles, questions, and answers.
 
-export const REQUEST_DECKS = 'REQUEST_DESKS';
+export const REQUEST_DECKS = 'REQUEST_DECKS';
 function requestDecks() {
   return {
     type: REQUEST_DECKS
