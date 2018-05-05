@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { FlatList, TouchableOpacity } from 'react-native';
+import { FlatList, TouchableOpacity, YellowBox } from 'react-native';
 import styled from 'styled-components';
 import { getDecks } from '../actions';
+
+//https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-380648083
+YellowBox.ignoreWarnings([
+  'Warning: isMounted(...) is deprecated',
+  'Module RCTImageLoader'
+]);
 
 const Page = styled.View`
   flex: 1;
@@ -47,6 +53,7 @@ const decks = [
 
 class DeckListView extends Component {
   componentDidMount() {
+    //getDecks();
     const { dispatch } = this.props;
     dispatch(getDecks());
   }
@@ -54,7 +61,7 @@ class DeckListView extends Component {
     return (
       <Page>
         <FlatList
-          data={decks}
+          data={this.props.decks}
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() => {
@@ -76,7 +83,20 @@ class DeckListView extends Component {
 }
 
 const mapStateToProps = state => ({
-  decks: state.decks || []
+  decks: [
+    { key: 'old deck', count: 3 },
+    { key: 'new deck', count: 2 },
+    { key: 'green deck', count: 3 },
+    { key: 'blue deck', count: 2 },
+    { key: 'tinker deck', count: 3 },
+    { key: 'taylor deck', count: 2 },
+    { key: 'soldier deck', count: 3 },
+    { key: 'spy deck', count: 2 },
+    { key: 'next deck', count: 2 },
+    { key: 'other deck', count: 2 }
+  ]
+  /* state.decks ||
+    [] /* state.decks ||  */
 });
 
 export default connect(mapStateToProps)(DeckListView);
