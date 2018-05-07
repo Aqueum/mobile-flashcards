@@ -4,7 +4,6 @@ import { createLogger } from 'redux-logger';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Text, YellowBox } from 'react-native';
 import { Provider } from 'react-redux';
-import Reducers from './reducers';
 import FrontPage from './components/FrontPage';
 // import AsyncTrial from './components/AsyncTrial';
 
@@ -19,7 +18,6 @@ const loggerMiddleware = createLogger();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
-  Reducers,
   composeEnhancers(applyMiddleware(thunkMiddleware, loggerMiddleware))
 );
 
