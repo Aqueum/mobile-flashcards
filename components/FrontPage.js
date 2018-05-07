@@ -8,6 +8,7 @@ import { createStore } from 'redux';
 import DeckAdd from './DeckAdd';
 import DeckListView from './DeckListView';
 import DeckView from './DeckView';
+import QuizView from './QuizView';
 
 const Page = styled.View`
   flex: 1;
@@ -37,6 +38,9 @@ const MainNavigator = StackNavigator({
   },
   AddDeck: {
     screen: DeckAdd
+  },
+  Quiz: {
+    screen: QuizView
   },
   initialRouteName: 'Home'
 });
