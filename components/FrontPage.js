@@ -6,6 +6,7 @@ import { TouchableOpacity, AsyncStorage } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { createStore } from 'redux';
 import DeckAdd from './DeckAdd';
+import CardAdd from './CardAdd';
 import DeckListView from './DeckListView';
 import DeckView from './DeckView';
 import QuizView from './QuizView';
@@ -38,6 +39,9 @@ const MainNavigator = StackNavigator({
   },
   AddDeck: {
     screen: DeckAdd
+  },
+  AddCard: {
+    screen: CardAdd
   },
   Quiz: {
     screen: QuizView
