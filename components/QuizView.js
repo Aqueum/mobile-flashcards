@@ -28,9 +28,11 @@ const ButtonTxt = styled.Text`
 
 class QuizView extends Component {
   render() {
+    const { params } = this.props.navigation.state;
+    const item = params ? params.item : null;
     return (
       <Page>
-        <Title>It's a Quiz</Title>
+        <Title>It's a {item.title} Quiz</Title>
       </Page>
     );
   }
