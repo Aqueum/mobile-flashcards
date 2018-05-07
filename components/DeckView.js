@@ -24,8 +24,8 @@ class DeckView extends Component {
     const item = params ? params.item : null;
     return (
       <Page>
-        <Title>{item.key}</Title>
-        <Enumeration>{item.count} cards</Enumeration>
+        <Title>{item.title}</Title>
+        <Enumeration>{item.questions.length} cards</Enumeration>
       </Page>
     );
   }
