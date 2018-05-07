@@ -30,7 +30,7 @@ function receiveDeck(id, json) {
 // and add it to the decks.
 
 export const NEW_DECK = 'NEW_DECK';
-function receiveNewDeck(title, json) {
+function newDeck(title, json) {
   return {
     type: NEW_DECK,
     title,
