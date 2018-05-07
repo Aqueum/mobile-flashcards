@@ -23,10 +23,11 @@ const Submit = styled.Text`
 `;
 
 class DeckAdd extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { title: '' };
-  }
+  state = { title: '' };
+
+  onSubmitEdit = () => {
+    console.log(this.state.title);
+  };
 
   render() {
     return (
@@ -42,8 +43,10 @@ class DeckAdd extends Component {
           }}
           onChangeText={title => this.setState({ title })}
           value={this.state.title}
-          onSubmitEditing={title => console.log(saving, { title })}
         />
+        <TouchableOpacity onPress={this.onSubmitEdit}>
+          <Submit>Submit</Submit>
+        </TouchableOpacity>
       </Page>
     );
   }
