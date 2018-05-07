@@ -6,6 +6,7 @@ import { Text } from 'react-native';
 import { Provider } from 'react-redux';
 import Reducers from './reducers';
 import FrontPage from './components/FrontPage';
+// import AsyncTrial from './components/AsyncTrial';
 
 const loggerMiddleware = createLogger();
 
