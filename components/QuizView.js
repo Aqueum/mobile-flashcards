@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
 
 const Page = styled.View`
@@ -27,12 +26,27 @@ const ButtonTxt = styled.Text`
 `;
 
 class QuizView extends Component {
+  state = {
+    page: 1,
+    showAnswer: false
+  };
   render() {
     const { params } = this.props.navigation.state;
     const item = params ? params.item : null;
+    console.log(item.questions[1].question);
     return (
       <Page>
         <Title>It's a {item.title} Quiz</Title>
+        <Title>Q: {item.questions[this.state.page].question}</Title>
+        <Button>
+          <ButtonTxt
+            onPress={() => {
+              this.setState({ showAnswer: true });
+            }}
+          >
+            Show Answer?
+          </ButtonTxt>
+        </Button>
       </Page>
     );
   }
