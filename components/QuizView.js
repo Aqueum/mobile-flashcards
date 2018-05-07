@@ -13,12 +13,6 @@ const Title = styled.Text`
   margin-top: 30;
 `;
 
-const Enumeration = styled.Text`
-  color: grey;
-  font-size: 14;
-  text-align: center;
-`;
-
 const Button = styled.TouchableOpacity`
   background: white;
   border-radius: 3px;
@@ -32,23 +26,12 @@ const ButtonTxt = styled.Text`
   text-align: center;
 `;
 
-class DeckView extends Component {
+class QuizView extends Component {
   render() {
-    const { params } = this.props.navigation.state;
-    const item = params ? params.item : null;
     return (
       <Page>
-        <Title>{item.title}</Title>
-        <Enumeration>{item.questions.length} cards</Enumeration>
-        <Button>
-          <ButtonTxt>Add Card</ButtonTxt>
-        </Button>
-        <Button>
-          <ButtonTxt>Start Quiz</ButtonTxt>
-        </Button>
+        <Title>It's a Quiz</Title>
       </Page>
     );
   }
 }
-
-export default DeckView;
