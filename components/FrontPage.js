@@ -8,7 +8,6 @@ import { createStore } from 'redux';
 import DeckAdd from './DeckAdd';
 import DeckListView from './DeckListView';
 import DeckView from './DeckView';
-import { getDecks } from '../utils/api';
 
 const Page = styled.View`
   flex: 1;
