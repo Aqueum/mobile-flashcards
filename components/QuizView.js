@@ -35,3 +35,5 @@ class QuizView extends Component {
     );
   }
 }
+
+export default QuizView;
