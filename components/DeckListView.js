@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FlatList, TouchableOpacity, YellowBox } from 'react-native';
 import styled from 'styled-components';
-import { getDecks } from '../actions';
 
 //https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-380648083
 YellowBox.ignoreWarnings([
-  'Warning: isMounted(...) is deprecated',
+  'Warning: isMounted(...) is deprecated in plain JavaScript React classes. Instead, make sure to clean up subscriptions and pending requests in componentWillUnmount to prevent memory leaks.',
   'Module RCTImageLoader'
 ]);
 
@@ -52,9 +51,6 @@ const decks = [
 */
 
 class DeckListView extends Component {
-  componentDidMount() {
-    this.props.dispatch(getDecks());
-  }
   render() {
     return (
       <Page>
