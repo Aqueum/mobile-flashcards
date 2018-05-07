@@ -6,15 +6,12 @@ class AsyncTrial extends Component {
     name: ''
   };
   componentDidMount() {
-    console.log(this.state);
     AsyncStorage.getItem('name').then(value => this.setState({ name: value }));
-    console.log(this.state);
   }
 
   setName = value => {
     AsyncStorage.setItem('name', value);
     this.setState({ name: value });
-    console.log(this.state);
   };
 
   render() {
