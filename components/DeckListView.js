@@ -50,7 +50,7 @@ class DeckListView extends Component {
               </Deck>
             </TouchableOpacity>
           )}
-          keyExtractor={item => item.title}
+          keyExtractor={item => item.title} // TODO: enforce unique titles on data entry // https://medium.com/react-native-development/how-to-use-the-flatlist-component-react-native-basics-92c482816fe6
         />
       </Page>
     );
