@@ -92,9 +92,31 @@ class QuizView extends Component {
             )}
           </Page>
         ) : (
-          <Title>
-            You scored {Math.round(score / item.questions.length * 100)}%
-          </Title>
+          <Page>
+            <Title>
+              You scored {Math.round(score / item.questions.length * 100)}%
+            </Title>
+            <Button
+              onPress={() => {
+                this.setState({
+                  showAnswer: false,
+                  page: 0,
+                  score: 0
+                });
+              }}
+            >
+              <ButtonTxt>Restart Quiz</ButtonTxt>
+            </Button>
+            <Button
+              onPress={() => {
+                this.props.navigation.navigate('Deck', {
+                  item: item
+                });
+              }}
+            >
+              <ButtonTxt>Back to Deck</ButtonTxt>
+            </Button>
+          </Page>
         )}
       </Page>
     );
