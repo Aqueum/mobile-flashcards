@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { TouchableOpacity, TextInput } from 'react-native';
 import styled from 'styled-components';
-import { saveDeckTitle } from '../utils/api';
 
 const Page = styled.View`
   flex: 1;
@@ -43,7 +42,7 @@ class DeckAdd extends Component {
           }}
           onChangeText={title => this.setState({ title })}
           value={this.state.title}
-          onSubmitEditing={title => saveDeckTitle({ title })}
+          onSubmitEditing={title => console.log(saving, { title })}
         />
       </Page>
     );

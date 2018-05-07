@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { FlatList, TouchableOpacity } from 'react-native';
+import { FlatList, TouchableOpacity, AsyncStorage } from 'react-native';
 import styled from 'styled-components';
 
 const Page = styled.View`
@@ -29,7 +29,6 @@ const Enumeration = styled.Text`
   text-align: center;
 `;
 
-/*
 const decks = [
   { key: 'old deck', count: 3 },
   { key: 'new deck', count: 2 },
@@ -42,14 +41,14 @@ const decks = [
   { key: 'next deck', count: 2 },
   { key: 'other deck', count: 2 }
 ];
-*/
 
 class DeckListView extends Component {
   render() {
     return (
       <Page>
+        <Title>{JSON.stringify(this.props.everything)}</Title>
         <FlatList
-          data={this.props.decks}
+          data={decks}
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() => {
@@ -70,26 +69,7 @@ class DeckListView extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    decks: [
-      { key: 'old deck', count: 3 },
-      { key: 'new deck', count: 2 },
-      { key: 'green deck', count: 3 },
-      { key: 'blue deck', count: 2 },
-      { key: 'tinker deck', count: 3 },
-      { key: 'taylor deck', count: 2 },
-      { key: 'soldier deck', count: 3 },
-      { key: 'spy deck', count: 2 },
-      { key: 'next deck', count: 2 },
-      { key: 'other deck', count: 2 }
-    ]
-  };
-  /* state.decks || []
-  /* state.decks ||  */
-}
-
-export default connect(mapStateToProps)(DeckListView);
+export default DeckListView;
 
 /*
 

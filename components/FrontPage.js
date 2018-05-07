@@ -2,12 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { StackNavigator } from 'react-navigation';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, AsyncStorage } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { createStore } from 'redux';
 import DeckAdd from './DeckAdd';
 import DeckListView from './DeckListView';
 import DeckView from './DeckView';
+import { getDecks } from '../utils/api';
 
 const Page = styled.View`
   flex: 1;
