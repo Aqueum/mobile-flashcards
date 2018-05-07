@@ -43,7 +43,13 @@ class DeckView extends Component {
         <Button>
           <ButtonTxt>Add Card</ButtonTxt>
         </Button>
-        <Button>
+        <Button
+          onPress={() => {
+            this.props.navigation.navigate('Quiz', {
+              item: item
+            });
+          }}
+        >
           <ButtonTxt>Start Quiz</ButtonTxt>
         </Button>
       </Page>
