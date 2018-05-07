@@ -32,12 +32,10 @@ const Enumeration = styled.Text`
 
 class DeckListView extends Component {
   render() {
-    console.log(starter);
-    console.log(Object.values(starter)); // https://stackoverflow.com/questions/45539619/react-convert-props-objects-into-array-then-setstate
     return (
       <Page>
         <FlatList
-          data={Object.values(starter)}
+          data={Object.values(starter)} // https://stackoverflow.com/questions/45539619/react-convert-props-objects-into-array-then-setstate
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() => {
