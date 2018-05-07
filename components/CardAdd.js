@@ -27,7 +27,7 @@ class CardAdd extends Component {
 
   onSubmitEdit = () => {
     console.log('Q: ', this.state.question);
-    console.log('A: ', this.state.question);
+    console.log('A: ', this.state.answer);
   };
 
   render() {
@@ -45,7 +45,7 @@ class CardAdd extends Component {
           onChangeText={question => this.setState({ question })}
           value={this.state.question}
         />
-        <Prompt>Enter new answer:</Prompt>
+        <Prompt>and it's answer:</Prompt>
         <TextInput
           style={{
             height: 40,
