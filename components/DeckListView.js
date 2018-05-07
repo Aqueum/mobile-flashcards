@@ -50,6 +50,7 @@ class DeckListView extends Component {
               </Deck>
             </TouchableOpacity>
           )}
+          keyExtractor={item => item.title}
         />
       </Page>
     );
