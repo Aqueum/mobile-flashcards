@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, YellowBox } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
-
-//https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-380648083
-YellowBox.ignoreWarnings([
-  'Warning: isMounted(...) is deprecated',
-  'Module RCTImageLoader'
-]);
 
 const Page = styled.View`
   flex: 1;
