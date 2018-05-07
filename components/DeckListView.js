@@ -53,9 +53,7 @@ const decks = [
 
 class DeckListView extends Component {
   componentDidMount() {
-    //getDecks();
-    const { dispatch } = this.props;
-    dispatch(getDecks());
+    this.props.dispatch(getDecks());
   }
   render() {
     return (
