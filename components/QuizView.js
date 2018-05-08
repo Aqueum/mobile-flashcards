@@ -75,12 +75,13 @@ class QuizView extends Component {
     const { page, showAnswer, score } = this.state;
     const { params } = this.props.navigation.state;
     const item = params ? params.item : null;
+    const pages = item.questions === undefined ? 0 : item.questions.length;
     return (
       <Page>
-        {page < item.questions.length ? (
+        {page < pages ? (
           <Page>
             <Enumeration>
-              {page + 1}/{item.questions.length}
+              {page + 1}/{pages}
             </Enumeration>
             <Question>Q: {item.questions[page].question}</Question>
             {showAnswer === true ? (
@@ -120,22 +121,14 @@ class QuizView extends Component {
                 </Button>
               </Page>
             )}
-            <Enumeration>
-              {item.questions.length - page - 1} remaining
-            </Enumeration>
+            <Enumeration>{pages - page - 1} remaining</Enumeration>
           </Page>
         ) : (
           <Page>
-            <Result>
-              You scored {Math.round(score / item.questions.length * 100)}%
-            </Result>
+            <Result>You scored {Math.round(score / pages * 100)}%</Result>
             <Enumeration>
-              ({score} correct from {item.questions.length}{' '}
-              {item.questions.length === 1 ? (
-                <Epart>question</Epart>
-              ) : (
-                <Epart>questions</Epart>
-              )})
+              ({score} correct from {pages}{' '}
+              {pages === 1 ? <Epart>question</Epart> : <Epart>questions</Epart>})
             </Enumeration>
             <Button
               onPress={() => {

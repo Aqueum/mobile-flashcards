@@ -52,7 +52,9 @@ class DeckView extends Component {
       <Page>
         <TitleBox>
           <Title>{item.title}</Title>
-          <Enumeration>{item.questions.length} cards</Enumeration>
+          <Enumeration>
+            {item.questions === undefined ? 0 : item.questions.length} cards
+          </Enumeration>
         </TitleBox>
         <Button
           onPress={() => {
