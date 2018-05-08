@@ -81,43 +81,37 @@ class QuizView extends Component {
             {showAnswer === true ? (
               <Page>
                 <Answer>A: {item.questions[page].answer}</Answer>
-                <Button>
-                  <ButtonTxt
-                    onPress={() => {
-                      this.setState({
-                        showAnswer: false,
-                        score: score + 1,
-                        page: page + 1
-                      });
-                    }}
-                  >
-                    Correct
-                  </ButtonTxt>
+                <Button
+                  onPress={() => {
+                    this.setState({
+                      showAnswer: false,
+                      score: score + 1,
+                      page: page + 1
+                    });
+                  }}
+                >
+                  <ButtonTxt>Correct</ButtonTxt>
                 </Button>
-                <Button>
-                  <ButtonTxt
-                    onPress={() => {
-                      this.setState({
-                        showAnswer: false,
-                        page: page + 1
-                      });
-                    }}
-                  >
-                    Incorrect
-                  </ButtonTxt>
+                <Button
+                  onPress={() => {
+                    this.setState({
+                      showAnswer: false,
+                      page: page + 1
+                    });
+                  }}
+                >
+                  <ButtonTxt>Incorrect</ButtonTxt>
                 </Button>
               </Page>
             ) : (
               <Page>
                 <Title />
-                <Button>
-                  <ButtonTxt
-                    onPress={() => {
-                      this.setState({ showAnswer: true });
-                    }}
-                  >
-                    Show Answer?
-                  </ButtonTxt>
+                <Button
+                  onPress={() => {
+                    this.setState({ showAnswer: true });
+                  }}
+                >
+                  <ButtonTxt>Show Answer?</ButtonTxt>
                 </Button>
               </Page>
             )}
