@@ -6,11 +6,14 @@ const Page = styled.View`
   flex: 1;
 `;
 
+const TitleBox = styled.View`
+  margin: 30px;
+`;
+
 const Title = styled.Text`
   color: black;
   font-size: 20;
   text-align: center;
-  margin-top: 30;
 `;
 
 const Enumeration = styled.Text`
@@ -38,17 +41,10 @@ class DeckView extends Component {
     const item = params ? params.item : null;
     return (
       <Page>
-        <Title>{item.title}</Title>
-        <Enumeration>{item.questions.length} cards</Enumeration>
-        <Button
-          onPress={() => {
-            this.props.navigation.navigate('AddCard', {
-              item: item
-            });
-          }}
-        >
-          <ButtonTxt>Add Card</ButtonTxt>
-        </Button>
+        <TitleBox>
+          <Title>{item.title}</Title>
+          <Enumeration>{item.questions.length} cards</Enumeration>
+        </TitleBox>
         <Button
           onPress={() => {
             this.props.navigation.navigate('Quiz', {
@@ -57,6 +53,15 @@ class DeckView extends Component {
           }}
         >
           <ButtonTxt>Start Quiz</ButtonTxt>
+        </Button>
+        <Button
+          onPress={() => {
+            this.props.navigation.navigate('AddCard', {
+              item: item
+            });
+          }}
+        >
+          <ButtonTxt>Add Card</ButtonTxt>
         </Button>
       </Page>
     );
