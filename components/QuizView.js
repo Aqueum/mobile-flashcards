@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 const Page = styled.View`
   flex: 1;
+  padding: 2px;
 `;
 
 const Title = styled.Text`
   color: black;
-  font-size: 20;
+  font-size: 18;
   text-align: center;
   margin-top: 30;
 `;
@@ -16,6 +17,29 @@ const Enumeration = styled.Text`
   color: grey;
   font-size: 14;
   text-align: center;
+`;
+
+const Question = styled.Text`
+  color: black;
+  font-size: 20;
+  text-align: left;
+  margin-top: 30;
+`;
+
+const Answer = styled.Text`
+  color: black;
+  font-size: 20;
+  text-align: right;
+  margin-top: 30;
+  margin-bottom: 30;
+`;
+
+const Result = styled.Text`
+  color: black;
+  font-size: 24;
+  text-align: center;
+  margin-top: 30;
+  margin-bottom: 30;
 `;
 
 const Button = styled.TouchableOpacity`
@@ -49,10 +73,10 @@ class QuizView extends Component {
             <Enumeration>
               {page + 1}/{item.questions.length}
             </Enumeration>
-            <Title>Q: {item.questions[page].question}</Title>
+            <Question>Q: {item.questions[page].question}</Question>
             {showAnswer === true ? (
               <Page>
-                <Title>A: {item.questions[page].answer}</Title>
+                <Answer>A: {item.questions[page].answer}</Answer>
                 <Button>
                   <ButtonTxt
                     onPress={() => {
@@ -80,22 +104,25 @@ class QuizView extends Component {
                 </Button>
               </Page>
             ) : (
-              <Button>
-                <ButtonTxt
-                  onPress={() => {
-                    this.setState({ showAnswer: true });
-                  }}
-                >
-                  Show Answer?
-                </ButtonTxt>
-              </Button>
+              <Page>
+                <Title />
+                <Button>
+                  <ButtonTxt
+                    onPress={() => {
+                      this.setState({ showAnswer: true });
+                    }}
+                  >
+                    Show Answer?
+                  </ButtonTxt>
+                </Button>
+              </Page>
             )}
           </Page>
         ) : (
           <Page>
-            <Title>
+            <Result>
               You scored {Math.round(score / item.questions.length * 100)}%
-            </Title>
+            </Result>
             <Button
               onPress={() => {
                 this.setState({
