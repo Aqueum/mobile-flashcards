@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { FlatList, TouchableOpacity, AsyncStorage } from 'react-native';
 import styled from 'styled-components';
 import { starter } from '../utils/data';
+import { getDecks } from '../utils/api';
+import { receiveDecks } from '../actions';
 
 const Page = styled.View`
   flex: 1;
@@ -31,11 +33,16 @@ const Enumeration = styled.Text`
 `;
 
 class DeckListView extends Component {
+  componentDidMount() {
+    getDecks().then(decks =>
+      this.props.dispatch(receiveDecks(JSON.parse(decks)))
+    );
+  }
   render() {
     return (
       <Page>
         <FlatList
-          data={Object.values(starter)} // https://stackoverflow.com/questions/45539619/react-convert-props-objects-into-array-then-setstate
+          data={Object.values(this.props.deckData)} // https://stackoverflow.com/questions/45539619/react-convert-props-objects-into-array-then-setstate
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() => {
@@ -46,7 +53,10 @@ class DeckListView extends Component {
             >
               <Deck>
                 <Title>{item.title}</Title>
-                <Enumeration>{item.questions.length} cards</Enumeration>
+                <Enumeration>
+                  {item.questions === undefined ? 0 : item.questions.length}
+                  cards
+                </Enumeration>
               </Deck>
             </TouchableOpacity>
           )}
@@ -57,4 +67,8 @@ class DeckListView extends Component {
   }
 }
 
-export default connect()(DeckListView);
+const mapStateToProps = state => ({
+  deckData: state
+});
+
+export default connect(mapStateToProps)(DeckListView);
