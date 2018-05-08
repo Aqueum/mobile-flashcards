@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TouchableOpacity, TextInput } from 'react-native';
 import styled from 'styled-components';
 import navigationOptions from 'react-navigation';
+import { saveDeckTitle } from '../utils/api';
 
 const Page = styled.View`
   flex: 1;
@@ -35,7 +36,9 @@ class DeckAdd extends Component {
   state = { title: '' };
 
   onSubmitEdit = () => {
-    console.log('New deck: ', this.state.title);
+    const { title } = this.state;
+    saveDeckTitle({ title, title });
+    console.log('New deck: ', title);
   };
 
   static navigationOptions = {

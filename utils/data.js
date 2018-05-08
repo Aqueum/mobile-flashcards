@@ -1,5 +1,7 @@
 import React from 'react';
 
+export const DECKS = 'MobileFlashcards:dataset';
+
 export const starter = {
   React: {
     title: 'React',
