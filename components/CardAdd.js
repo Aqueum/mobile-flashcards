@@ -14,6 +14,14 @@ const Prompt = styled.Text`
   margin-top: 5;
 `;
 
+const Input = styled.TextInput`
+  height: 40;
+  border-color: gray;
+  border-width: 1;
+  margin: 10px;
+  padding: 10px;
+`;
+
 const Submit = styled.Text`
   color: blue;
   font-size: 18;
@@ -34,26 +42,12 @@ class CardAdd extends Component {
     return (
       <Page>
         <Prompt>Enter new question:</Prompt>
-        <TextInput
-          style={{
-            height: 40,
-            borderColor: 'gray',
-            borderWidth: 1,
-            margin: 10,
-            padding: 10
-          }}
+        <Input
           onChangeText={question => this.setState({ question })}
           value={this.state.question}
         />
         <Prompt>and it's answer:</Prompt>
-        <TextInput
-          style={{
-            height: 40,
-            borderColor: 'gray',
-            borderWidth: 1,
-            margin: 10,
-            padding: 10
-          }}
+        <Input
           onChangeText={answer => this.setState({ answer })}
           value={this.state.answer}
         />
