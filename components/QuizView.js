@@ -17,6 +17,7 @@ const Enumeration = styled.Text`
   color: grey;
   font-size: 14;
   text-align: center;
+  margin-bottom: 15;
 `;
 
 const Question = styled.Text`
@@ -145,6 +146,7 @@ class QuizView extends Component {
             </Button>
           </Page>
         )}
+        <Enumeration>{item.questions.length - page - 1} remaining</Enumeration>
       </Page>
     );
   }
