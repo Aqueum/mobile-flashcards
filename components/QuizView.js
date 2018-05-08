@@ -158,6 +158,15 @@ class QuizView extends Component {
             >
               <ButtonTxt>Back to Deck</ButtonTxt>
             </Button>
+            <Button
+              onPress={() => {
+                this.props.navigation.navigate('Home', {
+                  item: item
+                });
+              }}
+            >
+              <ButtonTxt>View all Decks</ButtonTxt>
+            </Button>
           </Page>
         )}
       </Page>
