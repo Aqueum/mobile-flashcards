@@ -14,6 +14,14 @@ const Prompt = styled.Text`
   margin-top: 5;
 `;
 
+const Input = styled.TextInput`
+  height: 40;
+  border-color: gray;
+  border-width: 1;
+  margin: 10px;
+  padding: 10px;
+`;
+
 const Submit = styled.Text`
   color: blue;
   font-size: 18;
@@ -26,21 +34,14 @@ class DeckAdd extends Component {
   state = { title: '' };
 
   onSubmitEdit = () => {
-    console.log(this.state.title);
+    console.log('New deck: ', this.state.title);
   };
 
   render() {
     return (
       <Page>
         <Prompt>Enter new deck title:</Prompt>
-        <TextInput
-          style={{
-            height: 40,
-            borderColor: 'gray',
-            borderWidth: 1,
-            margin: 10,
-            padding: 10
-          }}
+        <Input
           onChangeText={title => this.setState({ title })}
           value={this.state.title}
         />
