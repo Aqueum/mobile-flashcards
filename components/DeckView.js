@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
 import navigationOptions from 'react-navigation';
+import {
+  clearLocalNotification,
+  setLocalNotification
+} from '../utils/notifications';
 
 const Page = styled.View`
   flex: 1;
@@ -52,6 +56,7 @@ class DeckView extends Component {
         </TitleBox>
         <Button
           onPress={() => {
+            clearLocalNotification().then(setLocalNotification);
             this.props.navigation.navigate('Quiz', {
               item: item
             });
