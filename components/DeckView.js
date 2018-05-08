@@ -52,7 +52,7 @@ class DeckView extends Component {
             });
           }}
         >
-          <ButtonTxt>Start Quiz</ButtonTxt>
+          <ButtonTxt>Start a Quiz</ButtonTxt>
         </Button>
         <Button
           onPress={() => {
@@ -61,7 +61,7 @@ class DeckView extends Component {
             });
           }}
         >
-          <ButtonTxt>Add Card</ButtonTxt>
+          <ButtonTxt>Create New Question</ButtonTxt>
         </Button>
       </Page>
     );
