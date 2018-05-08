@@ -5,15 +5,16 @@ import { DECKS, starter } from './data';
 
 // getDecks return all of the decks along with their titles, questions, and answers.
 export function getDecks() {
+  // AsyncStorage.removeItem(DECKS);
   return AsyncStorage.getItem(DECKS);
 }
 
 // saveDeckTitle: take in a single title argument and add it to the decks.
-export function saveDeckTitle({ title, key }) {
+export function saveDeckTitle(title) {
   return AsyncStorage.mergeItem(
     DECKS,
     JSON.stringify({
-      [key]: title
+      [title]: { title: title }
     })
   );
 }

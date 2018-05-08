@@ -44,7 +44,7 @@ class DeckAdd extends Component {
         [title]: { title: title }
       })
     );
-    saveDeckTitle({ title, title });
+    saveDeckTitle(title);
     console.log('New deck: ', title);
   };
 
