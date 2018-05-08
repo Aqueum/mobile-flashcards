@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
+import navigationOptions from 'react-navigation';
 
 const Page = styled.View`
   flex: 1;
@@ -36,6 +37,10 @@ const ButtonTxt = styled.Text`
 `;
 
 class DeckView extends Component {
+  static navigationOptions = {
+    title: 'Deck Options'
+  };
+
   render() {
     const { params } = this.props.navigation.state;
     const item = params ? params.item : null;
