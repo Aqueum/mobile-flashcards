@@ -57,10 +57,4 @@ class DeckListView extends Component {
   }
 }
 
-export default DeckListView;
-
-/*
-
-
-
-*/
+export default connect()(DeckListView);
