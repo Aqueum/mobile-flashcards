@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TouchableOpacity, TextInput } from 'react-native';
 import styled from 'styled-components';
+import navigationOptions from 'react-navigation';
 
 const Page = styled.View`
   flex: 1;
@@ -36,6 +37,10 @@ class CardAdd extends Component {
   onSubmitEdit = () => {
     console.log('Q: ', this.state.question);
     console.log('A: ', this.state.answer);
+  };
+
+  static navigationOptions = {
+    title: 'Add Card'
   };
 
   render() {

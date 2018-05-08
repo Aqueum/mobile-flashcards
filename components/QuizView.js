@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import navigationOptions from 'react-navigation';
 
 const Page = styled.View`
   flex: 1;
@@ -65,13 +66,17 @@ class QuizView extends Component {
     showAnswer: false,
     score: 0
   };
+
+  static navigationOptions = {
+    title: 'Quiz'
+  };
+
   render() {
     const { page, showAnswer, score } = this.state;
     const { params } = this.props.navigation.state;
     const item = params ? params.item : null;
     return (
       <Page>
-        <Title>It's a {item.title} Quiz</Title>
         {page < item.questions.length ? (
           <Page>
             <Enumeration>
