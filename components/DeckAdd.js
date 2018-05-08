@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { TouchableOpacity, TextInput } from 'react-native';
 import styled from 'styled-components';
 import navigationOptions from 'react-navigation';
+import { connect } from 'react-redux';
 import { saveDeckTitle } from '../utils/api';
+import { addDeck } from '../actions';
 
 const Page = styled.View`
   flex: 1;
@@ -37,6 +39,11 @@ class DeckAdd extends Component {
 
   onSubmitEdit = () => {
     const { title } = this.state;
+    this.props.dispatch(
+      addDeck({
+        [title]: title
+      })
+    );
     saveDeckTitle({ title, title });
     console.log('New deck: ', title);
   };
@@ -61,4 +68,4 @@ class DeckAdd extends Component {
   }
 }
 
-export default DeckAdd;
+export default connect()(DeckAdd);
