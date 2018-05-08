@@ -45,7 +45,6 @@ class DeckAdd extends Component {
       })
     );
     saveDeckTitle(title);
-    console.log('New deck: ', title);
   };
 
   static navigationOptions = {
