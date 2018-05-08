@@ -45,7 +45,7 @@ class DeckAdd extends Component {
           value={this.state.title}
         />
         <TouchableOpacity onPress={this.onSubmitEdit}>
-          <Submit>Submit</Submit>
+          <Submit>Create Deck</Submit>
         </TouchableOpacity>
       </Page>
     );
