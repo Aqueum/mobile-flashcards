@@ -38,7 +38,7 @@ const ButtonTxt = styled.Text`
 
 class DeckView extends Component {
   static navigationOptions = {
-    title: 'Deck Options'
+    title: 'Deck'
   };
 
   render() {
