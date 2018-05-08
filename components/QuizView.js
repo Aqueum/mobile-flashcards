@@ -20,6 +20,10 @@ const Enumeration = styled.Text`
   margin-bottom: 15;
 `;
 
+const Epart = styled.Text`
+  color: grey;
+`;
+
 const Question = styled.Text`
   color: black;
   font-size: 20;
@@ -40,7 +44,6 @@ const Result = styled.Text`
   font-size: 24;
   text-align: center;
   margin-top: 30;
-  margin-bottom: 30;
 `;
 
 const Button = styled.TouchableOpacity`
@@ -118,12 +121,23 @@ class QuizView extends Component {
                 </Button>
               </Page>
             )}
+            <Enumeration>
+              {item.questions.length - page - 1} remaining
+            </Enumeration>
           </Page>
         ) : (
           <Page>
             <Result>
               You scored {Math.round(score / item.questions.length * 100)}%
             </Result>
+            <Enumeration>
+              ({score} correct from {item.questions.length}{' '}
+              {item.questions.length === 1 ? (
+                <Epart>question</Epart>
+              ) : (
+                <Epart>questions</Epart>
+              )})
+            </Enumeration>
             <Button
               onPress={() => {
                 this.setState({
@@ -146,7 +160,6 @@ class QuizView extends Component {
             </Button>
           </Page>
         )}
-        <Enumeration>{item.questions.length - page - 1} remaining</Enumeration>
       </Page>
     );
   }
