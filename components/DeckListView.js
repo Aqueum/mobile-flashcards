@@ -54,7 +54,7 @@ class DeckListView extends Component {
               <Deck>
                 <Title>{item.title}</Title>
                 <Enumeration>
-                  {item.questions === undefined ? 0 : item.questions.length}
+                  {item.questions === undefined ? 0 : item.questions.length}{' '}
                   cards
                 </Enumeration>
               </Deck>
