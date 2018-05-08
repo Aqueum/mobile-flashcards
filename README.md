@@ -30,7 +30,7 @@ A flashcard app for iPhone X (which will likely also work, but hasn't been teste
 
 ## I'm not happy with
 
-1.
+1.  React-Navigation causes a "YellowBox isMounted(...) is deprecated" error, but they are [blaming this on React-Native](https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-385568845), hence there is currently only an error supression workaround. Unfortunately that isn't working for me. I have sunk hours into fixing this but given up.
 
 ## Review suggestions
 
