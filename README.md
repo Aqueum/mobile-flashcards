@@ -26,11 +26,13 @@ A flashcard app for iPhone X (which will likely also work, but hasn't been teste
 
 ## To do
 
-1.  Enforce unique titles on new deck entry (to avoid key conflict)
+1.  Enforce unique titles on new deck entry ~~(to avoid key conflict)~~ - it seems that this key conflicts are avoided automatically, as duplicating a deck name overwrites the original. Regretably this overwrites the questions also.
 
 ## I'm not happy with
 
 1.  React-Navigation causes a "YellowBox isMounted(...) is deprecated" error, but they are [blaming this on React-Native](https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-385568845), hence there is currently only an error supression workaround. Unfortunately that isn't working for me. I have sunk hours into fixing this but given up.
+2.  FlatList seems to struggle with more than 10 items, ignoring first 9 if 10+ given. Fortunately it's only the number of cards that the rubric needs to be unlimited & I have tested this above 10 & it works fine. But I'd like to know how to resolve that FlatList issue.
+3.  React-Navigate's back button leads to only new added deck showing when cycling back from add-deck. All buttons & redirects work properly and allow full navigation, so this is considered an edge case caused by React-Native, nevertheless a solution would be nice.
 
 ## Review suggestions
 
