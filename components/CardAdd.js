@@ -42,6 +42,9 @@ class CardAdd extends Component {
     const card = { question: this.state.question, answer: this.state.answer };
     this.props.dispatch(addCard(title, card));
     addCardToDeck(title, card);
+    this.props.navigation.navigate('DeckView', {
+      title: title
+    });
   };
 
   static navigationOptions = {
