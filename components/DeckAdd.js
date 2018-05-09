@@ -41,7 +41,7 @@ class DeckAdd extends Component {
     const { title } = this.state;
     this.props.dispatch(
       addDeck({
-        [title]: { title: title }
+        [title]: { title: title, questions: [] }
       })
     );
     saveDeckTitle(title);
