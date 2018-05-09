@@ -144,7 +144,7 @@ class QuizView extends Component {
             <Button
               onPress={() => {
                 this.props.navigation.navigate('DeckView', {
-                  item: item
+                  title: item.title
                 });
               }}
             >
@@ -152,9 +152,7 @@ class QuizView extends Component {
             </Button>
             <Button
               onPress={() => {
-                this.props.navigation.navigate('DeckListView', {
-                  item: item
-                });
+                this.props.navigation.navigate('DeckListView');
               }}
             >
               <ButtonTxt>View all Decks</ButtonTxt>
