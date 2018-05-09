@@ -152,7 +152,7 @@ class QuizView extends Component {
             </Button>
             <Button
               onPress={() => {
-                this.props.navigation.navigate('Home', {
+                this.props.navigation.navigate('DeckListView', {
                   item: item
                 });
               }}

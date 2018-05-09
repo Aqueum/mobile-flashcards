@@ -31,7 +31,7 @@ const Plus = styled.Text`
 `;
 
 const MainNavigator = StackNavigator({
-  Home: {
+  DeckListView: {
     screen: DeckListView
   },
   Deck: {
@@ -46,7 +46,7 @@ const MainNavigator = StackNavigator({
   Quiz: {
     screen: QuizView
   },
-  initialRouteName: 'Home'
+  initialRouteName: 'DeckListView'
 });
 
 DeckListView.navigationOptions = ({ navigation }) => ({
