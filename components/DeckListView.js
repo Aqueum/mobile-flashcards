@@ -68,7 +68,7 @@ class DeckListView extends Component {
 }
 
 const mapStateToProps = state => ({
-  deckData: state
+  deckData: state.decks || []
 });
 
 export default connect(mapStateToProps)(DeckListView);
