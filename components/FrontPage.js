@@ -34,7 +34,7 @@ const MainNavigator = StackNavigator({
   DeckListView: {
     screen: DeckListView
   },
-  Deck: {
+  DeckView: {
     screen: DeckView
   },
   AddDeck: {
