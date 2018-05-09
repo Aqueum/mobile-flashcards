@@ -6,7 +6,7 @@ import { Text, YellowBox } from 'react-native';
 import { Provider } from 'react-redux';
 import FrontPage from './components/FrontPage';
 import { setLocalNotification } from './utils/notifications';
-import reducer from './reducers';
+import rootReducer from './reducers';
 
 //https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-380648083
 YellowBox.ignoreWarnings([
@@ -19,7 +19,7 @@ const loggerMiddleware = createLogger();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
-  reducer,
+  rootReducer,
   composeEnhancers(applyMiddleware(thunkMiddleware, loggerMiddleware))
 );
 
