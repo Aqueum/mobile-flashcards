@@ -31,6 +31,8 @@ const Enumeration = styled.Text`
   text-align: center;
 `;
 
+// inspited by https://stackoverflow.com/questions/45539619/react-convert-props-objects-into-array-then-setstate
+// & https://medium.com/react-native-development/how-to-use-the-flatlist-component-react-native-basics-92c482816fe6
 class DeckListView extends Component {
   componentDidMount() {
     getDecks().then(decks =>
@@ -41,7 +43,7 @@ class DeckListView extends Component {
     return (
       <Page>
         <FlatList
-          data={Object.values(this.props.deckData)} // https://stackoverflow.com/questions/45539619/react-convert-props-objects-into-array-then-setstate
+          data={Object.values(this.props.deckData)}
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() => {
@@ -59,7 +61,7 @@ class DeckListView extends Component {
               </Deck>
             </TouchableOpacity>
           )}
-          keyExtractor={item => item.title} // TODO: enforce unique titles on data entry // https://medium.com/react-native-development/how-to-use-the-flatlist-component-react-native-basics-92c482816fe6
+          keyExtractor={item => item.title}
         />
       </Page>
     );

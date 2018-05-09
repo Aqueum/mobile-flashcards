@@ -1,5 +1,6 @@
 import { RECEIVE_DECKS, ADD_DECK, ADD_CARD } from '../actions';
 
+// inspired by https://github.com/reactjs/redux/issues/432#issuecomment-363958117
 function decks(state = {}, action) {
   switch (action.type) {
     case RECEIVE_DECKS:
