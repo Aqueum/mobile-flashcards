@@ -45,6 +45,9 @@ class DeckAdd extends Component {
       })
     );
     saveDeckTitle(title);
+    this.props.navigation.navigate('DeckView', {
+      title: title
+    });
   };
 
   static navigationOptions = {
