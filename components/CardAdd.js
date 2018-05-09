@@ -36,8 +36,8 @@ class CardAdd extends Component {
   state = { question: '', answer: '' };
 
   onSubmitEdit = () => {
-    console.log('Q: ', this.state.question);
-    console.log('A: ', this.state.answer);
+    const card = { question: this.state.question, answer: this.state.answer };
+    console.log(card);
   };
 
   static navigationOptions = {
