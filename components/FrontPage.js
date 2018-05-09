@@ -40,7 +40,7 @@ const MainNavigator = StackNavigator({
   DeckAdd: {
     screen: DeckAdd
   },
-  AddCard: {
+  CardAdd: {
     screen: CardAdd
   },
   Quiz: {
