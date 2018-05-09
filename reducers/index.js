@@ -5,12 +5,12 @@ function decksdata(state = {}, action) {
     case RECEIVE_DECKS:
       return {
         ...state,
-        decks: { ...action.decks}
+        decks: { ...action.decks }
       };
     case ADD_DECK:
       return {
         ...state,
-        decks: {...action.deck}
+        decks: { ...state.decks, ...action.deck }
       };
     default:
       return state;
