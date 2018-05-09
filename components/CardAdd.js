@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TouchableOpacity, TextInput } from 'react-native';
 import styled from 'styled-components';
 import navigationOptions from 'react-navigation';
+import { connect } from 'react-redux';
 
 const Page = styled.View`
   flex: 1;
@@ -64,4 +65,4 @@ class CardAdd extends Component {
   }
 }
 
-export default CardAdd;
+export default connect()(CardAdd);
