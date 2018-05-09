@@ -6,6 +6,8 @@ import {
   clearLocalNotification,
   setLocalNotification
 } from '../utils/notifications';
+import { getDeck } from '../utils/api';
+import { connect } from 'react-redux';
 
 const Page = styled.View`
   flex: 1;
@@ -46,8 +48,7 @@ class DeckView extends Component {
   };
 
   render() {
-    const { params } = this.props.navigation.state;
-    const item = params ? params.item : null;
+    const { item } = this.props;
     return (
       <Page>
         <TitleBox>
@@ -80,4 +81,9 @@ class DeckView extends Component {
   }
 }
 
-export default DeckView;
+function mapStateToProps(state, { navigation }) {
+  const title = navigation.state.params.title;
+  return { item: state.decks[title] || {} };
+}
+
+export default connect(mapStateToProps)(DeckView);
