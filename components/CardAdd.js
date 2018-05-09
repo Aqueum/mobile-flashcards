@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import navigationOptions from 'react-navigation';
 import { connect } from 'react-redux';
 import { addCard } from '../actions';
+import { addCardToDeck } from '../utils/api';
 
 const Page = styled.View`
   flex: 1;
@@ -40,6 +41,7 @@ class CardAdd extends Component {
     const title = this.props.navigation.state.params.item.title;
     const card = { question: this.state.question, answer: this.state.answer };
     this.props.dispatch(addCard(title, card));
+    addCardToDeck(title, card);
   };
 
   static navigationOptions = {
