@@ -43,7 +43,7 @@ const MainNavigator = StackNavigator({
   CardAdd: {
     screen: CardAdd
   },
-  Quiz: {
+  QuizView: {
     screen: QuizView
   },
   initialRouteName: 'DeckListView'

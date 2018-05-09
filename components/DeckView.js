@@ -59,7 +59,7 @@ class DeckView extends Component {
         <Button
           onPress={() => {
             clearLocalNotification().then(setLocalNotification);
-            this.props.navigation.navigate('Quiz', {
+            this.props.navigation.navigate('QuizView', {
               item: item
             });
           }}
