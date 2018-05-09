@@ -37,7 +37,7 @@ const MainNavigator = StackNavigator({
   DeckView: {
     screen: DeckView
   },
-  AddDeck: {
+  DeckAdd: {
     screen: DeckAdd
   },
   AddCard: {
@@ -54,7 +54,7 @@ DeckListView.navigationOptions = ({ navigation }) => ({
   headerRight: (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate('AddDeck');
+        navigation.navigate('DeckAdd');
       }}
     >
       <Plus>+</Plus>
