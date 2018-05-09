@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FlatList, TouchableOpacity, AsyncStorage } from 'react-native';
 import styled from 'styled-components';
-import { starter } from '../utils/data';
 import { getDecks } from '../utils/api';
 import { receiveDecks } from '../actions';
 

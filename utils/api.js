@@ -1,5 +1,6 @@
 import { AsyncStorage } from 'react-native';
-import { DECKS, starter } from './data';
+
+export const DECKS = 'MobileFlashcards:dataset';
 
 // To manage your AsyncStorage database, you'll want to create four different helper methods.
 
