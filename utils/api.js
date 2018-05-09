@@ -6,7 +6,7 @@ export const DECKS = 'MobileFlashcards:dataset';
 
 // getDecks return all of the decks along with their titles, questions, and answers.
 export function getDecks() {
-  // AsyncStorage.removeItem(DECKS);  // uncomment this line to reset AsyncStorage
+  // AsyncStorage.removeItem(DECKS); // uncomment this line to reset AsyncStorage
   return AsyncStorage.getItem(DECKS);
 }
 
