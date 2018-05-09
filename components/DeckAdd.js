@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { saveDeckTitle } from '../utils/api';
 import { addDeck } from '../actions';
 
+// styling
 const Page = styled.View`
   flex: 1;
 `;
@@ -34,6 +35,7 @@ const Submit = styled.Text`
   margin-top: 5;
 `;
 
+// Page where new deck title is entered to create a new deck
 class DeckAdd extends Component {
   state = { title: '' };
 

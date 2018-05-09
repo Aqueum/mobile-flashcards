@@ -1,12 +1,13 @@
 import { AsyncStorage } from 'react-native';
 
+// Async storage key
 export const DECKS = 'MobileFlashcards:dataset';
 
 // To manage your AsyncStorage database, you'll want to create four different helper methods.
 
 // getDecks return all of the decks along with their titles, questions, and answers.
 export function getDecks() {
-  // AsyncStorage.removeItem(DECKS); // uncomment this line to reset AsyncStorage
+  // AsyncStorage.removeItem(DECKS); // uncomment this line to reset AsyncStorage DECKS
   return AsyncStorage.getItem(DECKS);
 }
 

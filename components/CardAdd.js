@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { addCard } from '../actions';
 import { addCardToDeck } from '../utils/api';
 
+// Styling
+
 const Page = styled.View`
   flex: 1;
 `;
@@ -34,6 +36,8 @@ const Submit = styled.Text`
   margin-top: 5;
 `;
 
+// Page where new question and answer pair are entered
+// to be added to the deck from which this component is called
 class CardAdd extends Component {
   state = { question: '', answer: '' };
 

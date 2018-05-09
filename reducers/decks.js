@@ -1,5 +1,10 @@
 import { RECEIVE_DECKS, ADD_DECK, ADD_CARD } from '../actions';
 
+// Redux reducers receuve all decks (for hydration),
+// add a deck
+// or add a question deck to a card.
+// Key issue I overcame was add card being unable to itterate over cards when no cards available
+// resolution was to add an empty array when each new deck added (implemented in DeckAdd)
 // inspired by https://github.com/reactjs/redux/issues/432#issuecomment-363958117
 // & https://stackoverflow.com/questions/44251135/cannot-convert-undefined-or-null-to-object-redux
 function decks(state = {}, action) {

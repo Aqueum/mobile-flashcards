@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import navigationOptions from 'react-navigation';
 
+// styling
 const Page = styled.View`
   flex: 1;
   padding: 2px;
@@ -60,6 +61,13 @@ const ButtonTxt = styled.Text`
   text-align: center;
 `;
 
+// Quiz increments up through available questions,
+// initially shows question only,
+// on button-touch shows answer
+// & lets user input if they were correct or incorrect
+// then repeats for next question
+// when no more answers gives results in % and number correct from total
+// then options to restart, return to the deck or the homepage
 class QuizView extends Component {
   state = {
     page: 0,

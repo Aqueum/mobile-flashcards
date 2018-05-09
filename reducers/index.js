@@ -1,5 +1,7 @@
-// the root reducer - that combines all reducers into one
-// that can be called by the main index.js
+// the root reducer - not really required here as only one reducer,
+// I got the impression it might fix the itterating over no cards issue
+// a side effect is that it's elements automatically take its name (decks), so decided to leave it
+// as it took a reasonable amount of refactoring to get working...
 
 import { combineReducers } from 'redux';
 import decks from './decks';

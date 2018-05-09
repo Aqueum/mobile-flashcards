@@ -11,6 +11,7 @@ import DeckListView from './DeckListView';
 import DeckView from './DeckView';
 import QuizView from './QuizView';
 
+// styling
 const Page = styled.View`
   flex: 1;
   padding-top: 30px;
@@ -30,6 +31,7 @@ const Plus = styled.Text`
   font-size: 36;
 `;
 
+// Navigation - defines available pages & their locations
 const MainNavigator = StackNavigator({
   DeckListView: {
     screen: DeckListView
@@ -49,6 +51,7 @@ const MainNavigator = StackNavigator({
   initialRouteName: 'DeckListView'
 });
 
+// Navbar, with + to add new deck
 DeckListView.navigationOptions = ({ navigation }) => ({
   title: 'Decks',
   headerRight: (
@@ -62,6 +65,7 @@ DeckListView.navigationOptions = ({ navigation }) => ({
   )
 });
 
+// FrontPage is a container for all navigable pages
 class FrontPage extends React.Component {
   render() {
     return (
@@ -72,5 +76,4 @@ class FrontPage extends React.Component {
   }
 }
 
-//export default FrontPage;
 export default connect()(FrontPage);

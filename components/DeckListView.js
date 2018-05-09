@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { getDecks } from '../utils/api';
 import { receiveDecks } from '../actions';
 
+// styling
 const Page = styled.View`
   flex: 1;
 `;
@@ -31,6 +32,8 @@ const Enumeration = styled.Text`
   text-align: center;
 `;
 
+// Homepage that shows all decks and the number of cards (Q&A's) they contain
+// hydrates app from AsyncStorage on mount
 // inspited by https://stackoverflow.com/questions/45539619/react-convert-props-objects-into-array-then-setstate
 // & https://medium.com/react-native-development/how-to-use-the-flatlist-component-react-native-basics-92c482816fe6
 class DeckListView extends Component {

@@ -9,6 +9,7 @@ import {
 import { getDeck } from '../utils/api';
 import { connect } from 'react-redux';
 
+// styling
 const Page = styled.View`
   flex: 1;
 `;
@@ -42,6 +43,8 @@ const ButtonTxt = styled.Text`
   text-align: center;
 `;
 
+// Page that shows an individual deck
+// and gives the options to start a quiz or add a new question card
 class DeckView extends Component {
   static navigationOptions = {
     title: 'Deck'
