@@ -1,6 +1,7 @@
 import { RECEIVE_DECKS, ADD_DECK, ADD_CARD } from '../actions';
 
 // inspired by https://github.com/reactjs/redux/issues/432#issuecomment-363958117
+// & https://stackoverflow.com/questions/44251135/cannot-convert-undefined-or-null-to-object-redux
 function decks(state = {}, action) {
   switch (action.type) {
     case RECEIVE_DECKS:
