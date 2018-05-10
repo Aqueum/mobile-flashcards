@@ -36,7 +36,32 @@ A flashcard app for iPhone X (which will likely also work, but hasn't been teste
 
 ## Review suggestions
 
-Not yet submitted for review
+Reviewed succesfully at 03:28 BST on 10 May 2018:
+Meets Specifications
+Great job! You made it perfect! :+1:
+You showed excellent skills on React, Redux and React Native. :sunglasses:
+Keep learning and Stay Udacious :clap: :udacious:
+
+1.  You can possibly have a set of initial decks and questions which will allow the user to get started with the app straight away. You can also consider adding a splash screen to improve the user experience
+2.  You should add validations. I have left some comments in code review. do check it out! (new questions & new deck)
+3.  I left you some comments on how you can improve your application’s code structure, to follow the best react-native and react practice within your code review :blush:
+    Take a look at this article for some additional pointers: https://hackernoon.com/manage-react-native-project-folder-structure-and-simplify-the-code-c98da77ef792
+4.  CardAdd.js line 47: You should add validation here. you can add an alert or an error message when a user submits empty fields or form.
+    eg: if(!card){ return alert("fill both fields")}
+5.  CardAdd.js line 60: Here, you can use destructure. (Ex: `{ question, answer } = this.state)` now you will be able to access value of the variable by its name.
+6.  CardAdd.js line 64: Here, you will only pass the variable i.e value={question}.
+7.  CardAdd.js line 74: I encourage you to utilize the KeyboardAvoidingView component to avoid overlapping your inputs by the device’s keyboard
+    Interested in learning more? Take a look at this article: https://facebook.github.io/react-native/docs/keyboardavoidingview.html
+8.  README.md line 35 (React-Navigate's back button...): Good! You should try to fix this problem.
+9.  ~~README.md line 71: Great work :+1: Want to learn more about writing great README.md files? Have a look at our course on the subject here: https://www.udacity.com/course/writing-readmes--ud777 ~~
+10. notifications.js line 55: Fantastic work with notifications :clap:
+    Interested in learning more about push notifications with react-native? Take a look at this article: https://medium.com/differential/how-to-setup-push-notifications-in-react-native-ios-android-30ea0131355e
+11. QuizView.js line 58: I suggest you split up your styles for each component, to keep your application structure as clean as possible.
+    Take a look at the following article: https://medium.com/@tommylackemann/managing-styles-in-react-native-3546d3482d73
+12. DeckView.js line 48: You can migrate components which do not handle states to Stateless Functional Components. Read more about the Stateless Functional Components here : https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/
+13. DeckAdd.js line 43: Here, you can also add validations, if the user submits an empty form.
+    Ex: if(!title){ return alert("fill the title name")}
+14. actions/index.js line 31: you can also use arrow function here.
 
 # Files
 
