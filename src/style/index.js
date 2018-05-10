@@ -76,3 +76,22 @@ export const ButtonTxt = styled.Text`
   font-size: 16;
   text-align: center;
 `;
+
+export const MainPage = styled.View`
+  flex: 1;
+  padding-top: 30px;
+  background-color: white;
+`;
+
+export const Header = styled.Text`
+  color: black;
+  text-align: left;
+  margin-left: 5;
+  font-size: 22;
+`;
+
+export const Plus = styled.Text`
+  color: gray;
+  margin-right: 5;
+  font-size: 36;
+`;

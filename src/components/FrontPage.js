@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
 import { StackNavigator } from 'react-navigation';
 import { TouchableOpacity, AsyncStorage } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
@@ -10,26 +9,7 @@ import CardAdd from './CardAdd';
 import DeckListView from './DeckListView';
 import DeckView from './DeckView';
 import QuizView from './QuizView';
-
-// styling
-const Page = styled.View`
-  flex: 1;
-  padding-top: 30px;
-  background-color: white;
-`;
-
-const Header = styled.Text`
-  color: black;
-  text-align: left;
-  margin-left: 5;
-  font-size: 22;
-`;
-
-const Plus = styled.Text`
-  color: gray;
-  margin-right: 5;
-  font-size: 36;
-`;
+import { MainPage, Header, Plus } from '../style';
 
 // Navigation - defines available pages & their locations
 const MainNavigator = StackNavigator({
@@ -69,9 +49,9 @@ DeckListView.navigationOptions = ({ navigation }) => ({
 class FrontPage extends React.Component {
   render() {
     return (
-      <Page>
+      <MainPage>
         <MainNavigator />
-      </Page>
+      </MainPage>
     );
   }
 }
