@@ -46,14 +46,12 @@ DeckListView.navigationOptions = ({ navigation }) => ({
 });
 
 // FrontPage is a container for all navigable pages
-class FrontPage extends React.Component {
-  render() {
-    return (
-      <MainPage>
-        <MainNavigator />
-      </MainPage>
-    );
-  }
-}
+const FrontPage = () => {
+  return (
+    <MainPage>
+      <MainNavigator />
+    </MainPage>
+  );
+};
 
 export default connect()(FrontPage);

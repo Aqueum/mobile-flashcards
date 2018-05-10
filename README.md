@@ -50,7 +50,7 @@ Keep learning and Stay Udacious :clap: :udacious:
 4.  :x: I left you some comments on how you can improve your application’s code structure, to follow the best react-native and react practice within your code review :blush:
     Take a look at this article for some additional pointers: https://hackernoon.com/manage-react-native-project-folder-structure-and-simplify-the-code-c98da77ef792
 5.  :x: _CardAdd.js line 47:_ You should add validation here. you can add an alert or an error message when a user submits empty fields or form.
-    eg: `if(!card){ return alert("fill both fields")}` _- note that the reviewers example doesn't actually work_
+    eg: `if(!card){ return alert("fill both fields")}` _( note that the reviewers example doesn't actually work)_
 6.  :x: _CardAdd.js line 60:_ Here, you can use destructure. (Ex: `{ question, answer } = this.state)` now you will be able to access value of the variable by its name.
 7.  :x: _CardAdd.js line 64:_ Here, you will only pass the variable i.e value={question}.
 8.  :x: _CardAdd.js line 74:_ I encourage you to utilize the KeyboardAvoidingView component to avoid overlapping your inputs by the device’s keyboard
@@ -61,7 +61,7 @@ Keep learning and Stay Udacious :clap: :udacious:
     Interested in learning more about push notifications with react-native? Take a look at this article: https://medium.com/differential/how-to-setup-push-notifications-in-react-native-ios-android-30ea0131355e
 12. :x: _QuizView.js line 58:_ I suggest you split up your styles for each component, to keep your application structure as clean as possible.
     Take a look at the following article: https://medium.com/@tommylackemann/managing-styles-in-react-native-3546d3482d73
-13. _DeckView.js line 48:_ You can migrate components which do not handle states to Stateless Functional Components. Read more about the Stateless Functional Components here : https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/
+13. ;x: _(did for FrontPage, but couldn't for DeckView)_ _DeckView.js line 48:_ You can migrate components which do not handle states to Stateless Functional Components. Read more about the Stateless Functional Components here : https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/
 14. :x:_DeckAdd.js line 43:_ Here, you can also add validations, if the user submits an empty form. Ex: `if(!title){ return alert("fill the title name")}`
 15. _actions/index.js line 31:_ you can also use arrow function here.
 
