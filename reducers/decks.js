@@ -2,9 +2,9 @@ import { RECEIVE_DECKS, ADD_DECK, ADD_CARD } from '../actions';
 
 // reviewer suggested I add starter data.
 // I thougt it might be interesting to add it straight into the reducer
-// so it bypassess AsyncStore.  This means if the stor is empty you get this.
-// once you add your own items and restart, the starter data dissappears...
-
+// so it bypassess AsyncStore.  This means if AsyncStore is empty you get the starter data.
+// Once you add your own items and restart, the starter data dissappears...
+// Side effect is that questions added to the starter decks are lost on refresh.
 const starter = {
   React: {
     title: 'React',
