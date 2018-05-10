@@ -4,9 +4,9 @@ import { createLogger } from 'redux-logger';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Text, YellowBox } from 'react-native';
 import { Provider } from 'react-redux';
-import FrontPage from './components/FrontPage';
-import { setLocalNotification } from './utils/notifications';
-import rootReducer from './reducers';
+import FrontPage from './src/components/FrontPage';
+import { setLocalNotification } from './src/utils/notifications';
+import rootReducer from './src/reducers';
 
 // react-navigation is raising an isMounted warning, react-native say it isn't their fault
 // for some reason this widely accepted fix isn't working for me.
