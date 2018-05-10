@@ -57,7 +57,7 @@ Keep learning and Stay Udacious :clap: :udacious:
     Interested in learning more? Take a look at this article: https://facebook.github.io/react-native/docs/keyboardavoidingview.html
 9.  _README.md line 35 (React-Navigate's back button...):_ Good! You should try to fix this problem.
 10. :x: _README.md line 71:_ Great work :+1: Want to learn more about writing great README.md files? Have a look at our course on the subject here: https://www.udacity.com/course/writing-readmes--ud777
-11. _notifications.js line 55:_ Fantastic work with notifications :clap:
+11. :x: _notifications.js line 55:_ Fantastic work with notifications :clap:
     Interested in learning more about push notifications with react-native? Take a look at this article: https://medium.com/differential/how-to-setup-push-notifications-in-react-native-ios-android-30ea0131355e
 12. :x: _QuizView.js line 58:_ I suggest you split up your styles for each component, to keep your application structure as clean as possible.
     Take a look at the following article: https://medium.com/@tommylackemann/managing-styles-in-react-native-3546d3482d73
