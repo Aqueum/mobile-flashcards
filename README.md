@@ -63,7 +63,7 @@ Keep learning and Stay Udacious :clap: :udacious:
     Take a look at the following article: https://medium.com/@tommylackemann/managing-styles-in-react-native-3546d3482d73
 13. ;x: _(did for FrontPage, but couldn't for DeckView)_ _DeckView.js line 48:_ You can migrate components which do not handle states to Stateless Functional Components. Read more about the Stateless Functional Components here : https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/
 14. :x:_DeckAdd.js line 43:_ Here, you can also add validations, if the user submits an empty form. Ex: `if(!title){ return alert("fill the title name")}`
-15. _actions/index.js line 31:_ you can also use arrow function here.
+15. :x: _actions/index.js line 31:_ you can also use arrow function here.
 
 # Files
 
