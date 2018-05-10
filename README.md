@@ -24,9 +24,9 @@ A flashcard app for iPhone X (which will likely also work, but hasn't been teste
 
 # Known issues
 
-## To do
+:x: = complete/resolved
 
-:x: = complete
+## To do
 
 1.  Enforce unique titles on new deck entry ~~(to avoid key conflict)~~ - it seems that this key conflicts are avoided automatically, as duplicating a deck name overwrites the original. Regretably this overwrites the questions also.
 
