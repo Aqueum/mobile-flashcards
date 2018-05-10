@@ -51,8 +51,8 @@ Keep learning and Stay Udacious :clap: :udacious:
     Take a look at this article for some additional pointers: https://hackernoon.com/manage-react-native-project-folder-structure-and-simplify-the-code-c98da77ef792
 5.  :x: _CardAdd.js line 47:_ You should add validation here. you can add an alert or an error message when a user submits empty fields or form.
     eg: `if(!card){ return alert("fill both fields")}` _- note that the reviewers example doesn't actually work_
-6.  _CardAdd.js line 60:_ Here, you can use destructure. (Ex: `{ question, answer } = this.state)` now you will be able to access value of the variable by its name.
-7.  _CardAdd.js line 64:_ Here, you will only pass the variable i.e value={question}.
+6.  :x: _CardAdd.js line 60:_ Here, you can use destructure. (Ex: `{ question, answer } = this.state)` now you will be able to access value of the variable by its name.
+7.  :x: _CardAdd.js line 64:_ Here, you will only pass the variable i.e value={question}.
 8.  _CardAdd.js line 74:_ I encourage you to utilize the KeyboardAvoidingView component to avoid overlapping your inputs by the device’s keyboard
     Interested in learning more? Take a look at this article: https://facebook.github.io/react-native/docs/keyboardavoidingview.html
 9.  _README.md line 35 (React-Navigate's back button...):_ Good! You should try to fix this problem.
