@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, TextInput } from 'react-native';
+import {
+  TouchableOpacity,
+  TextInput,
+  KeyboardAvoidingView
+} from 'react-native';
 import navigationOptions from 'react-navigation';
 import { connect } from 'react-redux';
 import { addCard } from '../actions';
@@ -28,7 +32,7 @@ class CardAdd extends Component {
   render() {
     const { question, answer } = this.state;
     return (
-      <Page>
+      <KeyboardAvoidingView behavior="padding" enabled>
         <Prompt>Enter new question:</Prompt>
         <Input
           onChangeText={question => this.setState({ question })}
@@ -46,7 +50,7 @@ class CardAdd extends Component {
             <Submit>Submit</Submit>
           </TouchableOpacity>
         )}
-      </Page>
+      </KeyboardAvoidingView>
     );
   }
 }

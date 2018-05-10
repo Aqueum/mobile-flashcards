@@ -53,7 +53,7 @@ Keep learning and Stay Udacious :clap: :udacious:
     eg: `if(!card){ return alert("fill both fields")}` _- note that the reviewers example doesn't actually work_
 6.  :x: _CardAdd.js line 60:_ Here, you can use destructure. (Ex: `{ question, answer } = this.state)` now you will be able to access value of the variable by its name.
 7.  :x: _CardAdd.js line 64:_ Here, you will only pass the variable i.e value={question}.
-8.  _CardAdd.js line 74:_ I encourage you to utilize the KeyboardAvoidingView component to avoid overlapping your inputs by the device’s keyboard
+8.  :x: _CardAdd.js line 74:_ I encourage you to utilize the KeyboardAvoidingView component to avoid overlapping your inputs by the device’s keyboard
     Interested in learning more? Take a look at this article: https://facebook.github.io/react-native/docs/keyboardavoidingview.html
 9.  _README.md line 35 (React-Navigate's back button...):_ Good! You should try to fix this problem.
 10. :x: _README.md line 71:_ Great work :+1: Want to learn more about writing great README.md files? Have a look at our course on the subject here: https://www.udacity.com/course/writing-readmes--ud777
