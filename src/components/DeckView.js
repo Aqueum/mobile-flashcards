@@ -57,9 +57,9 @@ class DeckView extends Component {
   }
 }
 
-function mapStateToProps(state, { navigation }) {
+const mapStateToProps = (state, { navigation }) => {
   const title = navigation.state.params.title;
   return { item: state.decks[title] || {} };
-}
+};
 
 export default connect(mapStateToProps)(DeckView);
