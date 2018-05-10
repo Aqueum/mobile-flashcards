@@ -61,7 +61,7 @@ Keep learning and Stay Udacious :clap: :udacious:
     Interested in learning more about push notifications with react-native? Take a look at this article: https://medium.com/differential/how-to-setup-push-notifications-in-react-native-ios-android-30ea0131355e
 12. :x: _QuizView.js line 58:_ I suggest you split up your styles for each component, to keep your application structure as clean as possible.
     Take a look at the following article: https://medium.com/@tommylackemann/managing-styles-in-react-native-3546d3482d73
-13. ;x: _(did for FrontPage, but couldn't for DeckView)_ _DeckView.js line 48:_ You can migrate components which do not handle states to Stateless Functional Components. Read more about the Stateless Functional Components here : https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/
+13. :x: _(did for FrontPage, but couldn't for DeckView)_ _DeckView.js line 48:_ You can migrate components which do not handle states to Stateless Functional Components. Read more about the Stateless Functional Components here : https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/
 14. :x:_DeckAdd.js line 43:_ Here, you can also add validations, if the user submits an empty form. Ex: `if(!title){ return alert("fill the title name")}`
 15. :x: _actions/index.js line 31:_ you can also use arrow function here.
 
