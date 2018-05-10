@@ -26,6 +26,8 @@ A flashcard app for iPhone X (which will likely also work, but hasn't been teste
 
 ## To do
 
+:x: = complete
+
 1.  Enforce unique titles on new deck entry ~~(to avoid key conflict)~~ - it seems that this key conflicts are avoided automatically, as duplicating a deck name overwrites the original. Regretably this overwrites the questions also.
 
 ## I'm not happy with
@@ -53,7 +55,7 @@ Keep learning and Stay Udacious :clap: :udacious:
 7.  _CardAdd.js line 74:_ I encourage you to utilize the KeyboardAvoidingView component to avoid overlapping your inputs by the device’s keyboard
     Interested in learning more? Take a look at this article: https://facebook.github.io/react-native/docs/keyboardavoidingview.html
 8.  _README.md line 35 (React-Navigate's back button...):_ Good! You should try to fix this problem.
-9.  _README.md line 71:_ Great work :+1: Want to learn more about writing great README.md files? Have a look at our course on the subject here: https://www.udacity.com/course/writing-readmes--ud777 :check:
+9.  _README.md line 71:_ Great work :+1: Want to learn more about writing great README.md files? Have a look at our course on the subject here: https://www.udacity.com/course/writing-readmes--ud777 :x:
 10. _notifications.js line 55:_ Fantastic work with notifications :clap:
     Interested in learning more about push notifications with react-native? Take a look at this article: https://medium.com/differential/how-to-setup-push-notifications-in-react-native-ios-android-30ea0131355e
 11. _QuizView.js line 58:_ I suggest you split up your styles for each component, to keep your application structure as clean as possible.
