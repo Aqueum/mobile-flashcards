@@ -59,3 +59,20 @@ export const Enumeration = styled.Text`
   font-size: 14;
   text-align: center;
 `;
+
+export const TitleBox = styled.View`
+  margin: 30px;
+`;
+
+export const Button = styled.TouchableOpacity`
+  background: white;
+  border-radius: 3px;
+  margin: 30px;
+  padding: 30px;
+`;
+
+export const ButtonTxt = styled.Text`
+  color: black;
+  font-size: 16;
+  text-align: center;
+`;
