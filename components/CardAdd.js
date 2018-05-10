@@ -36,6 +36,14 @@ const Submit = styled.Text`
   margin-top: 5;
 `;
 
+const Reminder = styled.Text`
+  color: gray;
+  font-size: 14;
+  text-align: right;
+  margin-right: 5;
+  margin-top: 5;
+`;
+
 // Page where new question and answer pair are entered
 // to be added to the deck from which this component is called
 class CardAdd extends Component {
@@ -56,21 +64,26 @@ class CardAdd extends Component {
   };
 
   render() {
+    const { question, answer } = this.state;
     return (
       <Page>
         <Prompt>Enter new question:</Prompt>
         <Input
           onChangeText={question => this.setState({ question })}
-          value={this.state.question}
+          value={question}
         />
         <Prompt>and it's answer:</Prompt>
         <Input
           onChangeText={answer => this.setState({ answer })}
-          value={this.state.answer}
+          value={answer}
         />
-        <TouchableOpacity onPress={this.onSubmitEdit}>
-          <Submit>Submit</Submit>
-        </TouchableOpacity>
+        {!question || !answer ? (
+          <Reminder>please enter a question & answer</Reminder>
+        ) : (
+          <TouchableOpacity onPress={this.onSubmitEdit}>
+            <Submit>Submit</Submit>
+          </TouchableOpacity>
+        )}
       </Page>
     );
   }

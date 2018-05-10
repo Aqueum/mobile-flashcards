@@ -41,6 +41,9 @@ class DeckAdd extends Component {
 
   onSubmitEdit = () => {
     const { title } = this.state;
+    if (!title) {
+      return alert('Please enter a title');
+    }
     this.props.dispatch(
       addDeck({
         [title]: { title: title, questions: [] }
