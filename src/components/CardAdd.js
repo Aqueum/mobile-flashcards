@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { TouchableOpacity, TextInput } from 'react-native';
-import styled from 'styled-components';
 import navigationOptions from 'react-navigation';
 import { connect } from 'react-redux';
 import { addCard } from '../actions';
