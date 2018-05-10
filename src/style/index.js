@@ -37,3 +37,25 @@ export const Reminder = styled.Text`
   margin-right: 5;
   margin-top: 5;
 `;
+
+export const Deck = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border-top-color: lightgray;
+  border-top-width: 2;
+  padding-top: 20;
+  padding-bottom: 20;
+`;
+
+export const Title = styled.Text`
+  color: black;
+  font-size: 20;
+  text-align: center;
+`;
+
+export const Enumeration = styled.Text`
+  color: grey;
+  font-size: 14;
+  text-align: center;
+`;
