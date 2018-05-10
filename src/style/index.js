@@ -95,3 +95,48 @@ export const Plus = styled.Text`
   margin-right: 5;
   font-size: 36;
 `;
+
+export const QuizPage = styled.View`
+  flex: 1;
+  padding: 2px;
+`;
+
+export const QuizTitle = styled.Text`
+  color: black;
+  font-size: 18;
+  text-align: center;
+  margin-top: 30;
+`;
+
+export const QuizEnumeration = styled.Text`
+  color: grey;
+  font-size: 14;
+  text-align: center;
+  margin-bottom: 15;
+`;
+
+export const Epart = styled.Text`
+  color: grey;
+`;
+
+export const Question = styled.Text`
+  color: black;
+  font-size: 20;
+  text-align: left;
+  margin-top: 30;
+`;
+
+export const Answer = styled.Text`
+  color: black;
+  font-size: 20;
+  text-align: right;
+  margin-top: 30;
+  margin-bottom: 30;
+`;
+
+export const Result = styled.Text`
+  color: black;
+  font-size: 24;
+  text-align: center;
+  margin-top: 30;
+`;

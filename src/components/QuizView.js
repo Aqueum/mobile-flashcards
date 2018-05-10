@@ -1,65 +1,17 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import navigationOptions from 'react-navigation';
-
-// styling
-const Page = styled.View`
-  flex: 1;
-  padding: 2px;
-`;
-
-const Title = styled.Text`
-  color: black;
-  font-size: 18;
-  text-align: center;
-  margin-top: 30;
-`;
-
-const Enumeration = styled.Text`
-  color: grey;
-  font-size: 14;
-  text-align: center;
-  margin-bottom: 15;
-`;
-
-const Epart = styled.Text`
-  color: grey;
-`;
-
-const Question = styled.Text`
-  color: black;
-  font-size: 20;
-  text-align: left;
-  margin-top: 30;
-`;
-
-const Answer = styled.Text`
-  color: black;
-  font-size: 20;
-  text-align: right;
-  margin-top: 30;
-  margin-bottom: 30;
-`;
-
-const Result = styled.Text`
-  color: black;
-  font-size: 24;
-  text-align: center;
-  margin-top: 30;
-`;
-
-const Button = styled.TouchableOpacity`
-  background: white;
-  border-radius: 3px;
-  margin: 30px;
-  padding: 30px;
-`;
-
-const ButtonTxt = styled.Text`
-  color: black;
-  font-size: 16;
-  text-align: center;
-`;
+import {
+  Page,
+  QuizPage,
+  QuizTitle,
+  QuizEnumeration,
+  Epart,
+  Question,
+  Answer,
+  Result,
+  Button,
+  ButtonTxt
+} from '../style';
 
 // Quiz increments up through available questions,
 // initially shows question only,
@@ -76,7 +28,7 @@ class QuizView extends Component {
   };
 
   static navigationOptions = {
-    title: 'Quiz'
+    QuizTitle: 'Quiz'
   };
 
   render() {
@@ -87,13 +39,13 @@ class QuizView extends Component {
     return (
       <Page>
         {page < pages ? (
-          <Page>
-            <Enumeration>
+          <QuizPage>
+            <QuizEnumeration>
               {page + 1}/{pages}
-            </Enumeration>
+            </QuizEnumeration>
             <Question>Q: {item.questions[page].question}</Question>
             {showAnswer === true ? (
-              <Page>
+              <QuizPage>
                 <Answer>A: {item.questions[page].answer}</Answer>
                 <Button
                   onPress={() => {
@@ -116,10 +68,10 @@ class QuizView extends Component {
                 >
                   <ButtonTxt>Incorrect</ButtonTxt>
                 </Button>
-              </Page>
+              </QuizPage>
             ) : (
-              <Page>
-                <Title />
+              <QuizPage>
+                <QuizTitle />
                 <Button
                   onPress={() => {
                     this.setState({ showAnswer: true });
@@ -127,17 +79,17 @@ class QuizView extends Component {
                 >
                   <ButtonTxt>Show Answer?</ButtonTxt>
                 </Button>
-              </Page>
+              </QuizPage>
             )}
-            <Enumeration>{pages - page - 1} remaining</Enumeration>
-          </Page>
+            <QuizEnumeration>{pages - page - 1} remaining</QuizEnumeration>
+          </QuizPage>
         ) : (
-          <Page>
+          <QuizPage>
             <Result>You scored {Math.round(score / pages * 100)}%</Result>
-            <Enumeration>
+            <QuizEnumeration>
               ({score} correct from {pages}{' '}
               {pages === 1 ? <Epart>question</Epart> : <Epart>questions</Epart>})
-            </Enumeration>
+            </QuizEnumeration>
             <Button
               onPress={() => {
                 this.setState({
@@ -165,7 +117,7 @@ class QuizView extends Component {
             >
               <ButtonTxt>View all Decks</ButtonTxt>
             </Button>
-          </Page>
+          </QuizPage>
         )}
       </Page>
     );
