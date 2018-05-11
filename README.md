@@ -25,6 +25,7 @@ A flashcard app for iPhone X (which will likely also work, but hasn't been teste
 # Known issues
 
 :x: = complete/resolved
+
 :o: = attempted, but abandoned
 
 ## To do
@@ -33,9 +34,9 @@ A flashcard app for iPhone X (which will likely also work, but hasn't been teste
 
 ## I'm not happy with
 
-1.  React-Navigation causes a "YellowBox isMounted(...) is deprecated" warning, but they are [blaming this on React-Native](https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-385568845), hence there is currently only an error supression workaround. Unfortunately that isn't working for me. I have sunk hours into fixing this but given up.
-2.  FlatList seems to struggle with more than 10 items, ignoring first 9 if 10+ given. Fortunately it's only the number of cards that the rubric needs to be unlimited & I have tested this above 20 & it works fine. But I'd like to know how to resolve that FlatList issue.
-3.  React-Navigate's back button leads to only new added deck showing when cycling back from add-deck. All buttons & redirects work properly and allow full navigation, so this is considered an edge case caused by React-Native, nevertheless a solution would be nice.
+1.  :o: React-Navigation causes a "YellowBox isMounted(...) is deprecated" warning, but they are [blaming this on React-Native](https://github.com/react-navigation/react-navigation/issues/3956#issuecomment-385568845), hence there is currently only an error supression workaround. Unfortunately even the error suppression isn't working for me (I have it in App.js). I have sunk hours into trying to fixing this.
+2.  :o: My FlatList can't render more than say 11 items, they all flash up initially then it only shows items 12+. Likewise when I get to 23 items, the full list flashes up, then it only shows items 23+.
+3.  :o: React-Navigate's header back '<' button leads to only new added deck showing when cycling back from add-deck. My own navigation works fine, but I can't even work out how to start debugging this.
 
 ## Review suggestions
 
