@@ -25,6 +25,7 @@ A flashcard app for iPhone X (which will likely also work, but hasn't been teste
 # Known issues
 
 :x: = complete/resolved
+:o: = attempted, but abandoned
 
 ## To do
 
@@ -44,7 +45,8 @@ Great job! You made it perfect! :+1:
 You showed excellent skills on React, Redux and React Native. :sunglasses:
 Keep learning and Stay Udacious :clap: :udacious:
 
-1.  :x: You can possibly have a set of initial decks and questions which will allow the user to get started with the app straight away.
+1.  :o: You can possibly have a set of initial decks and questions which will allow the user to get started with the app straight away.
+    _(without the ability to delete decks I decided against this, after trying a way to add starter data to Redux Store only, which had too many side effects - see data.js)_
 2.  :x: You can also consider adding a splash screen to improve the user experience.
 3.  :x: You should add validations. I have left some comments in code review. do check it out! (new questions & new deck)
 4.  :x: I left you some comments on how you can improve your application’s code structure, to follow the best react-native and react practice within your code review :blush:
