@@ -29,7 +29,7 @@ A flashcard app for iPhone X (which will likely also work, but hasn't been teste
 
 ## To do
 
-1.  Enforce unique titles on new deck entry ~~(to avoid key conflict)~~ - it seems that this key conflicts are avoided automatically, as duplicating a deck name overwrites the original. Regretably this overwrites the questions also.
+1.  :x: Enforce unique titles on new deck entry ~~(to avoid key conflict) - it seems that key conflicts are avoided automatically, as duplicating a deck name overwrites the original. Regretably this overwrites its questions also.~~
 
 ## I'm not happy with
 

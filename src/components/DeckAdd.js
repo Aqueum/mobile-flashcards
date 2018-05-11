@@ -15,6 +15,13 @@ class DeckAdd extends Component {
     if (!title) {
       return alert('Please enter a title');
     }
+    if (this.props.titles.includes(title)) {
+      return alert(
+        'there is already a deck called "' +
+          title +
+          '" please enter a unique deck title'
+      );
+    }
     this.props.dispatch(
       addDeck({
         [title]: { title: title, questions: [] }
@@ -46,4 +53,8 @@ class DeckAdd extends Component {
   }
 }
 
-export default connect()(DeckAdd);
+const mapStateToProps = state => ({
+  titles: Object.keys(state.decks) || []
+});
+
+export default connect(mapStateToProps)(DeckAdd);
